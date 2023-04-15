@@ -1,0 +1,30 @@
+<html>
+
+<h1>
+    Chronic kidney disease prediction
+</h1>
+<div class="form-group">
+	<br>
+	<form action = "{{url_for('predict')}}" method ="POST" >
+		<label for="age">What is your age?</label>
+			<input type="number" min="1" id="age" name="age">
+		<label for="al">Albumin</label>	
+			<input type="number" min="0" id="al" name="al">
+		<label for="htn">Hypertension</label>
+		<select id="htn" name="htn">
+			  <option value="1">Yes</option>
+			  <option value="0">No</option>
+		</select> 
+  <br></br>
+<div class="form-group">  
+  <button type="submit" id="pbutton">Predict</button>
+</div>
+	<br>	
+<div id ="result">
+	<p>{{result}}</p>
+</div>
+</div>
+
+</form>
+
+</html>
